@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Taks</title>
+</head>
+<body>
+    <script> 
+    // 1.	Create an array of 5 fruits.
+      let fruits= ["Mango","Strawberry","Orange","Litchy,Grapes"]
+       console.log(fruits);
+
+// 2.	Add 'Mango' to the end of the array.
+
+         let a=["Strawberry","Orange","Litchy,Grapes"]
+         a.push("Mango")
+         console.log(a);
+
+
+        //  3.	Add 'Strawberry' to the beginning.
+        let b= ["Orange","Litchy,Grapes"]
+        b.unshift("Strawberry")
+        console.log(b);
+
+        // 4.	Remove the last element.
+         let c= ["Mango","Strawberry","Orange","Litchy,Grapes"]
+             c.pop("Grapes")
+             console.log(c);
+
+            //  5.	Remove the first element.
+
+            let d = ["Mango","Strawberry","Orange","Litchy","Grapes"]
+             d.shift("Mango")
+             console.log(d);
+
+            //  6.	Check if 'Apple' is in the array.
+
+            let e =  ['Apple', 'Banana', 'Orange', 'Mango'];
+
+            let hasApple = e.includes('Apple');
+            console.log(hasApple)
+
+            // 7.	Find the index of 'Banana'.
+
+            let f = ['Apple', 'Banana', 'Orange', 'Mango'];
+
+            let index = f.indexOf('Banana');
+            console.log(index)
+
+            // 8.	Replace the second element with 'Peach'.
+
+            let g = ['Apple', 'Banana', 'Orange', 'Mango'];
+              g[1] = "Peach"
+             console.log(g);
+
+            //  9.	Get the length of the array.
+
+            let h = ['Apple', 'Banana', 'Orange', 'Mango'];
+         let length = g.length
+             console.log(length);
+           
+            //  10.	Convert the array to a string.
+                let arr = ["Anjani","Patel"];
+                 let str = arr.join("|");
+                 console.log(str);
+
+                 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>    
+     let number = [2,4,6,8,10];
+     let doublenumbers = number.map(doublefunction);
+      console.log(doublenumbers);
+     function doublefunction(numb) {
+        return numb*20;}
+       
+
+    let oddnumbers = [18,20,25,30,35,40,45,50,55,60];
+    let odd = oddnumbers.filter(oddtwo);
+    console.log(odd);
+    function oddtwo(oddnumbertwo) {
+        return oddnumbertwo%2==0;
+    }   
+
+// array.forEach(function(currentValue,index,arr),thisValue)
+// br console ma as a string lese.
+
+// function humesa ek value return karse atle return lakhvu jaruri che
+
+     let array1= [1,2,3,4,5];
+     array1.forEach(function(value,index){console.log("index of array "+index +" : "+value)})
+
+    //  Find the first number greater than 50 using find()
+     let a = [1,2,3,4,51,52,54,57,59];
+    let  b = a.find(function (a1) {
+         return a1>50});
+    console.log(b);
+
+    // Check if all elements are positive using every()
+    let c = [1,2,3,4,5,6,7,8];
+    console.log(c.every(d));
+    function d(c1) {
+        return c1>0
+    }
+//  let c = [1,2,3,4,5,-6,7,8];
+//     console.log(c.every(d));
+//     function d(c1) {
+//         return c1>0
+//     }
+
+// Check if any number is divisible by 10 using some()
+        let e = [100,40,50,60,30,50,55,67,8,9,67];
+         let f = e.some(function sum(e1){ 
+          return e1%10==0});
+          console.log(f);
+
+        //   Sort an array of numbers in ascending order using sort()
+    
+        let numbers = [40, 100, 1, 5, 25, 10];
+
+       numbers.sort(function(a, b) {
+       return a - b; });
+
+    console.log(numbers);
+
+// Flatten a nested array one level using flat()
+
+let flat1 = [2,5,6,7,[9,10,8,9]];
+   console.log(flat1.flat());
+
+// Find the index of a specific value using indexOf()
+
+let fruits = ["Apple", "Banana", "Mango", "Peach"];
+let index = fruits.indexOf("Peach");
+console.log(index);
+
+// Remove the last element using pop()
+
+let pop = ["Apple", "Banana", "Mango", "Peach"];
+ pop.pop();
+console.log(pop);
+
+// Add an element at the end using push()
+let tom = ["Apple", "Banana", "Mango", "Peach"];
+ tom.push("strawberry");
+console.log(tom);
+
+// Remove the first element using shift()
+let patlu = ["Apple", "Banana", "Mango", "Peach"];
+    patlu.shift();
+    console.log(patlu);
+
+
+
+// Add an element at the start using unshift()
+let motu = ["Apple", "Banana", "Mango", "Peach"];
+motu.unshift();
+console.log(motu);
+
+// 16Join an array into a string using join()
+let bheem = ["Hello" ,"world" , "Bheem"];
+console.log(bheem.join('|'));
+
+// 17Split a string into an array using split()
+let chotu = "Hello, World, Bheem";
+console.log(chotu.split(','));
+
+ 
+// 18Slice a sub-array from index 2 to 5 using slice()
+// 19Modify elements from index 1 using splice()
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+    
+      
+       
+
+   
+
+
+        
+
+
+
+     
+
+     
+     
+    
+
+
+    </script>
+    
+</body>
+</html>
