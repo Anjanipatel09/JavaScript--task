@@ -27,8 +27,10 @@
     <input type="submit" value="Submit">
 
   </form>
+<script>
 
-  <script>
+
+   
     let form = document.getElementById('myform');
     let username = document.getElementById('username');
     let email = document.getElementById('email');
@@ -93,9 +95,9 @@
         passwordError.innerHTML = ""
       }
       
-
-    }
-  </script>
+    }  
+    document.querySelector("form").addEventListener("submit",validation);
+  </script> 
 
 
 

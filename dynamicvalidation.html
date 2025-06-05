@@ -1,0 +1,129 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamic Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f4f4f4;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input,
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      display: none;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="myForm" >
+    <h2>Register</h2>
+
+    <div class="input-group">
+      <input type="text" id="name" placeholder="Full Name">
+      <div class="error" id="nameError">Name is required</div>
+    </div>
+
+    <div class="input-group">
+      <input type="email" id="email" placeholder="Email">
+      <div class="error" id="emailError">Enter a valid email</div>
+    </div>
+
+    <div class="input-group">
+      <input type="password" id="password" placeholder="Password">
+      <div class="error" id="passwordError">Password must be at least 6 characters</div>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('myForm');
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      validateInputs();
+    });
+
+    function showError(input, message) {
+      const errorDiv = document.getElementById(`${ input.id }Error`);
+      errorDiv.textContent = message;
+      errorDiv.style.display = 'block';
+    }
+
+    function hideError(input) {
+      const errorDiv = document.getElementById(`${ input.id }Error`);
+      errorDiv.style.display = 'none';
+    }
+
+    function validateInputs() {
+      // let isValid = false;
+
+      if (name.value.trim() === '') {
+        showError(name, 'Name is required');
+        // isValid = false;
+         event.preventDefault();
+      } else {
+        hideError(name);
+      }
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.value.match(emailPattern)) {
+        showError(email, 'Enter a valid email');
+        // isValid = false;
+         event.preventDefault();
+      } else {
+        hideError(email);
+      }
+
+      if (password.value.length < 6) {
+        showError(password, 'Password must be at least 6 characters');
+        // isValid = false;
+         event.preventDefault();
+      } else {
+        hideError(password);
+      }
+
+      // if (isValid) {
+      //   alert('Form submitted successfully!');
+       
+      // }
+    }
+  </script>
+
+</body>
+
+</html>
